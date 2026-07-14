@@ -15,8 +15,8 @@ export const BeforeAfter = () => {
             className="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl glow-blue"
           >
             <ReactCompareSlider
-              itemOne={<ReactCompareSliderImage src="/office_dirty_1783985042084.jpg" alt="Avant" referrerPolicy="no-referrer" />}
-              itemTwo={<ReactCompareSliderImage src="/office_clean_1783985053811.jpg" alt="Après" referrerPolicy="no-referrer" />}
+              itemOne={<ReactCompareSliderImage src="/images/office_dirty_1783985042084.jpg" alt="Avant" referrerPolicy="no-referrer" />}
+              itemTwo={<ReactCompareSliderImage src="/images/office_clean_1783985053811.jpg" alt="Après" referrerPolicy="no-referrer" />}
               style={{ width: '100%', height: '100%', aspectRatio: '16/9' }}
             />
             

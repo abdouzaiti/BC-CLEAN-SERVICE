@@ -1,6 +1,11 @@
 import { motion } from 'motion/react';
 import { CheckCircle2, Car, HardHat, Layout, Building2 } from 'lucide-react';
 
+import carWashImg from '../assets/images/luxury_car_wash_1783995385948.jpg';
+import postConstructionImg from '../assets/images/post_construction_clean_1783995398371.jpg';
+import windowsImg from '../assets/images/window_cleaning_luxury_1783995410277.jpg';
+import officeImg from '../assets/images/office_cleaning_pro_1783995420695.jpg';
+
 const ServiceCard = ({ title, subtitle, list, price, image, icon: Icon, delay }: any) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
@@ -11,14 +16,15 @@ const ServiceCard = ({ title, subtitle, list, price, image, icon: Icon, delay }:
     className="glass-card group overflow-hidden flex flex-col h-full border-white/5 hover:border-primary-blue/30 transition-all duration-500"
   >
     {/* Image Container */}
-    <div className="relative h-64 overflow-hidden">
+    <div className="relative h-64 overflow-hidden rounded-t-[32px] border-b border-white/5">
       <img 
         src={image} 
         alt={title} 
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        className="w-full h-full object-center object-cover transition-all duration-1000 group-hover:scale-110 group-hover:brightness-110"
         referrerPolicy="no-referrer"
+        loading="lazy"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-dark-navy to-transparent opacity-60"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-dark-navy/90 via-dark-navy/20 to-transparent opacity-60"></div>
       
       {/* Icon Badge */}
       <div className="absolute top-6 left-6 w-12 h-12 glass rounded-xl flex items-center justify-center text-primary-blue shadow-xl">
@@ -66,7 +72,7 @@ export const Services = () => {
       subtitle: 'Intérieur & Extérieur',
       list: ['Aspiration complète', 'Nettoyage des vitres', 'Dépoussiérage rapide', 'Lavage extérieur', 'Finition parfumée'],
       price: '29,90€',
-      image: '/service_car_wash_1783984898306.jpg',
+      image: carWashImg,
       icon: Car,
       delay: 0.1
     },
@@ -75,7 +81,7 @@ export const Services = () => {
       subtitle: 'Prêt à habiter',
       list: ['Dépoussiérage complet', 'Nettoyage sols & surfaces', 'Retrait traces de peinture', 'Nettoyage sanitaires', 'Évacuation déchets'],
       price: '120€',
-      image: '/service_post_construction_1783984909551.jpg',
+      image: postConstructionImg,
       icon: HardHat,
       delay: 0.2
     },
@@ -84,7 +90,7 @@ export const Services = () => {
       subtitle: 'Clarté Maximale',
       list: ['Intérieur / Extérieur', 'Finitions sans traces', 'Encadrements nettoyés', 'Particuliers & Pro', 'Toutes surfaces vitrées'],
       price: '5€ / M²',
-      image: '/service_windows_1783984919454.jpg',
+      image: windowsImg,
       icon: Layout,
       delay: 0.3
     },
@@ -93,7 +99,7 @@ export const Services = () => {
       subtitle: 'Entreprises & Pro',
       list: ['Entretien bureaux', 'Nettoyage industriel', 'Nettoyage machines', 'Décapage sols', 'Désinfection'],
       price: 'SUR DEVIS',
-      image: '/service_office_1783984933497.jpg',
+      image: officeImg,
       icon: Building2,
       delay: 0.4
     }
