@@ -66,7 +66,7 @@ export const Services = () => {
       subtitle: 'Intérieur & Extérieur',
       list: ['Aspiration complète', 'Nettoyage des vitres', 'Dépoussiérage rapide', 'Lavage extérieur', 'Finition parfumée'],
       price: '29,90€',
-      image: '/images/service_car_wash_1783984898306.jpg',
+      image: '/service_car_wash_1783984898306.jpg',
       icon: Car,
       delay: 0.1
     },
@@ -75,7 +75,7 @@ export const Services = () => {
       subtitle: 'Prêt à habiter',
       list: ['Dépoussiérage complet', 'Nettoyage sols & surfaces', 'Retrait traces de peinture', 'Nettoyage sanitaires', 'Évacuation déchets'],
       price: '120€',
-      image: '/images/service_post_construction_1783984909551.jpg',
+      image: '/service_post_construction_1783984909551.jpg',
       icon: HardHat,
       delay: 0.2
     },
@@ -84,7 +84,7 @@ export const Services = () => {
       subtitle: 'Clarté Maximale',
       list: ['Intérieur / Extérieur', 'Finitions sans traces', 'Encadrements nettoyés', 'Particuliers & Pro', 'Toutes surfaces vitrées'],
       price: '5€ / M²',
-      image: '/images/service_windows_1783984919454.jpg',
+      image: '/service_windows_1783984919454.jpg',
       icon: Layout,
       delay: 0.3
     },
@@ -93,7 +93,7 @@ export const Services = () => {
       subtitle: 'Entreprises & Pro',
       list: ['Entretien bureaux', 'Nettoyage industriel', 'Nettoyage machines', 'Décapage sols', 'Désinfection'],
       price: 'SUR DEVIS',
-      image: '/images/service_office_1783984933497.jpg',
+      image: '/service_office_1783984933497.jpg',
       icon: Building2,
       delay: 0.4
     }
