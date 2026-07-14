@@ -1,0 +1,8 @@
+{
+  "name": "BC Clean Service",
+  "description": "Premium luxury cleaning service showcase website with dark theme, glassmorphism, and interactive before/after comparisons.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
