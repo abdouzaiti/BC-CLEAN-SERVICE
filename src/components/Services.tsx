@@ -10,24 +10,24 @@ const ServiceCard = ({ title, subtitle, list, price, image, icon: Icon, delay }:
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ delay }}
-    whileHover={{ y: -10 }}
-    className="glass-card group overflow-hidden flex flex-col h-full border-dark-navy/5 hover:border-primary-blue/30 transition-all duration-500"
+    viewport={{ once: true, margin: "-50px" }}
+    transition={{ delay, duration: 0.5 }}
+    className="bg-white group overflow-hidden flex flex-col h-full border border-dark-navy/5 hover:border-primary-blue/30 transition-all duration-500 rounded-[32px] shadow-sm hover:shadow-xl"
   >
     {/* Image Container */}
-    <div className="relative h-64 overflow-hidden rounded-t-[32px] border-b border-dark-navy/5">
+    <div className="relative h-64 overflow-hidden rounded-t-[32px] border-b border-dark-navy/5 bg-gray-100">
       <img 
         src={image} 
         alt={title} 
-        className="w-full h-full object-center object-cover transition-all duration-1000 group-hover:scale-110 group-hover:brightness-110"
+        className="w-full h-full object-center object-cover transition-transform duration-700 group-hover:scale-105"
         referrerPolicy="no-referrer"
         loading="lazy"
+        decoding="async"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-dark-navy/40 via-transparent to-transparent opacity-60"></div>
       
       {/* Icon Badge */}
-      <div className="absolute top-6 left-6 w-12 h-12 glass rounded-xl flex items-center justify-center text-primary-blue shadow-xl">
+      <div className="absolute top-6 left-6 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-primary-blue shadow-lg">
         <Icon className="w-6 h-6" />
       </div>
     </div>

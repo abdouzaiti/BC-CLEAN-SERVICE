@@ -11,6 +11,8 @@ export const Hero = () => {
           alt="Hero Background" 
           className="w-full h-full object-cover object-right"
           referrerPolicy="no-referrer"
+          loading="eager"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-black/50 md:bg-black/30"></div>
       </div>

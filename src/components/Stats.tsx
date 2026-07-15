@@ -49,8 +49,8 @@ export const Stats = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`bg-dark-navy/5 backdrop-blur-xl border border-dark-navy/5 rounded-[32px] p-8 text-center transition-all duration-500 hover:bg-dark-navy/10 ${
-                i === 2 ? 'shadow-xl' : ''
+              className={`bg-white shadow-sm border border-dark-navy/5 rounded-[32px] p-8 text-center transition-all duration-500 hover:shadow-lg ${
+                i === 2 ? 'shadow-md border-primary-blue/10' : ''
               }`}
             >
               <div className="text-3xl font-black text-dark-navy mb-2 flex items-baseline justify-center gap-1">

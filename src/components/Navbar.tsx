@@ -27,12 +27,12 @@ export const Navbar = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? 'py-2 md:py-4' : 'py-4 md:py-8'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'py-2' : 'py-4 md:py-8'
       }`}
     >
-      <div className={`container mx-auto px-4 md:px-6 flex items-center justify-between transition-all duration-500 ${
-        isScrolled ? 'glass py-2 shadow-lg rounded-full' : ''
+      <div className={`container mx-auto px-4 md:px-6 flex items-center justify-between transition-all duration-300 ${
+        isScrolled ? 'bg-white/90 backdrop-blur-md py-2 shadow-lg rounded-full' : ''
       }`}>
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 md:gap-3 group shrink-0">
@@ -84,8 +84,8 @@ export const Navbar = () => {
           {/* Mobile Toggle */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`lg:hidden w-11 h-11 glass rounded-xl flex items-center justify-center active:scale-95 transition-all ${
-              isScrolled ? 'text-dark-navy' : 'text-white'
+            className={`lg:hidden w-11 h-11 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center active:scale-95 transition-all ${
+              isScrolled ? 'text-dark-navy border border-dark-navy/5 bg-white/80' : 'text-white border border-white/20'
             }`}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -97,10 +97,10 @@ export const Navbar = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="lg:hidden mt-2 mx-4 glass rounded-3xl overflow-hidden backdrop-blur-2xl shadow-2xl"
+            exit={{ opacity: 0, y: -10 }}
+            className="lg:hidden mt-2 mx-4 bg-white/95 backdrop-blur-xl border border-dark-navy/5 rounded-3xl overflow-hidden shadow-2xl"
           >
             <div className="flex flex-col p-6 gap-4">
               {navLinks.map((link) => (

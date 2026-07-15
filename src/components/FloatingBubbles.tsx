@@ -1,46 +1,38 @@
 import { motion } from 'motion/react';
+import { useMemo } from 'react';
 
 export const FloatingBubbles = () => {
-  const bubbles = Array.from({ length: 15 });
+  const bubbles = useMemo(() => 
+    Array.from({ length: 6 }).map((_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      opacity: Math.random() * 0.1 + 0.05,
+      scale: Math.random() * 0.3 + 0.2,
+      duration: Math.random() * 20 + 20,
+      delay: Math.random() * 10,
+    })), []);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* Background Glows */}
-      <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary-blue/10 blur-[120px] rounded-full animate-pulse-slow"></div>
-      <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-light-blue/5 blur-[120px] rounded-full animate-pulse-slow"></div>
+      {/* Background Glows - Extremely minimal */}
+      <div className="absolute top-0 right-0 w-[40%] h-[40%] bg-primary-blue/[0.03] blur-[150px] rounded-full"></div>
       
-      {/* Star Particles */}
-      <div className="absolute top-[20%] left-[30%] w-[3px] h-[3px] bg-dark-navy rounded-full opacity-10 shadow-[0_0_10px_rgba(7,17,31,0.1)]"></div>
-      <div className="absolute top-[60%] left-[10%] w-[2px] h-[2px] bg-dark-navy rounded-full opacity-5 shadow-[0_0_8px_rgba(7,17,31,0.1)]"></div>
-      <div className="absolute top-[15%] left-[85%] w-[2px] h-[2px] bg-dark-navy rounded-full opacity-10 shadow-[0_0_8px_rgba(7,17,31,0.1)]"></div>
-      <div className="absolute bottom-[25%] right-[15%] w-[3px] h-[3px] bg-dark-navy rounded-full opacity-10 shadow-[0_0_10px_rgba(7,17,31,0.1)]"></div>
-      
-      {/* Animated Bubbles */}
-      {bubbles.map((_, i) => (
+      {/* Animated Particles - Simplified */}
+      {bubbles.map((bubble) => (
         <motion.div
-          key={i}
-          initial={{ 
-            x: Math.random() * 100 + '%', 
-            y: '110%', 
-            opacity: Math.random() * 0.2 + 0.1,
-            scale: Math.random() * 0.5 + 0.5
-          }}
-          animate={{ 
-            y: '-10%',
-            x: (Math.random() * 100) + (Math.sin(i) * 10) + '%'
-          }}
+          key={bubble.id}
+          initial={{ x: `${bubble.x}%`, y: '110%', opacity: 0 }}
+          animate={{ y: '-10%', opacity: bubble.opacity }}
           transition={{
-            duration: Math.random() * 20 + 10,
+            duration: bubble.duration,
             repeat: Infinity,
             ease: "linear",
-            delay: Math.random() * 20
+            delay: bubble.delay
           }}
-          className="absolute w-4 h-4 rounded-full glass border-dark-navy/10 blur-[1px]"
+          className="absolute w-2 h-2 bg-dark-navy/10 rounded-full"
+          style={{ willChange: 'transform', scale: bubble.scale }}
         />
       ))}
-      
-      {/* Subtle Particles */}
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] mix-blend-overlay"></div>
     </div>
   );
 };
