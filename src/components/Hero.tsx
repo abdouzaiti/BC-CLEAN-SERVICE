@@ -3,13 +3,13 @@ import { ArrowRight, Phone, Zap, ShieldCheck, Star } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[85vh] lg:h-screen flex items-center pt-24 md:pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-24 md:pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src="/back1.png" 
           alt="Hero Background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-right"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-black/50 md:bg-black/30"></div>
@@ -66,30 +66,8 @@ export const Hero = () => {
                 Demander un devis
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="btn-outline flex items-center gap-2 group text-sm md:text-lg px-8 md:px-10 py-4 md:py-5 justify-center">
-                Nous appeler
-              </button>
             </motion.div>
             
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4 md:gap-6"
-            >
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
-                <span className="text-primary-blue">⚡</span>
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-white">Intervention Rapide</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
-                <span className="text-primary-blue">🛡</span>
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-white">Produits Pros</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/10">
-                <span className="text-primary-blue">⭐</span>
-                <span className="text-[11px] font-semibold uppercase tracking-wider text-white">Satisfaction</span>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>
