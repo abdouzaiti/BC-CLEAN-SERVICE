@@ -10,10 +10,10 @@ export const FloatingBubbles = () => {
       <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-light-blue/5 blur-[120px] rounded-full animate-pulse-slow"></div>
       
       {/* Star Particles */}
-      <div className="absolute top-[20%] left-[30%] w-[3px] h-[3px] bg-white rounded-full opacity-40 shadow-[0_0_10px_white]"></div>
-      <div className="absolute top-[60%] left-[10%] w-[2px] h-[2px] bg-white rounded-full opacity-20 shadow-[0_0_8px_white]"></div>
-      <div className="absolute top-[15%] left-[85%] w-[2px] h-[2px] bg-white rounded-full opacity-30 shadow-[0_0_8px_white]"></div>
-      <div className="absolute bottom-[25%] right-[15%] w-[3px] h-[3px] bg-white rounded-full opacity-40 shadow-[0_0_10px_white]"></div>
+      <div className="absolute top-[20%] left-[30%] w-[3px] h-[3px] bg-dark-navy rounded-full opacity-10 shadow-[0_0_10px_rgba(7,17,31,0.1)]"></div>
+      <div className="absolute top-[60%] left-[10%] w-[2px] h-[2px] bg-dark-navy rounded-full opacity-5 shadow-[0_0_8px_rgba(7,17,31,0.1)]"></div>
+      <div className="absolute top-[15%] left-[85%] w-[2px] h-[2px] bg-dark-navy rounded-full opacity-10 shadow-[0_0_8px_rgba(7,17,31,0.1)]"></div>
+      <div className="absolute bottom-[25%] right-[15%] w-[3px] h-[3px] bg-dark-navy rounded-full opacity-10 shadow-[0_0_10px_rgba(7,17,31,0.1)]"></div>
       
       {/* Animated Bubbles */}
       {bubbles.map((_, i) => (
@@ -22,7 +22,7 @@ export const FloatingBubbles = () => {
           initial={{ 
             x: Math.random() * 100 + '%', 
             y: '110%', 
-            opacity: Math.random() * 0.3 + 0.1,
+            opacity: Math.random() * 0.2 + 0.1,
             scale: Math.random() * 0.5 + 0.5
           }}
           animate={{ 
@@ -35,7 +35,7 @@ export const FloatingBubbles = () => {
             ease: "linear",
             delay: Math.random() * 20
           }}
-          className="absolute w-4 h-4 rounded-full glass border-white/20 blur-[1px]"
+          className="absolute w-4 h-4 rounded-full glass border-dark-navy/10 blur-[1px]"
         />
       ))}
       

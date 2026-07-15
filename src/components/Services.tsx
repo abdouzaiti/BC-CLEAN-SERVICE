@@ -13,10 +13,10 @@ const ServiceCard = ({ title, subtitle, list, price, image, icon: Icon, delay }:
     viewport={{ once: true }}
     transition={{ delay }}
     whileHover={{ y: -10 }}
-    className="glass-card group overflow-hidden flex flex-col h-full border-white/5 hover:border-primary-blue/30 transition-all duration-500"
+    className="glass-card group overflow-hidden flex flex-col h-full border-dark-navy/5 hover:border-primary-blue/30 transition-all duration-500"
   >
     {/* Image Container */}
-    <div className="relative h-64 overflow-hidden rounded-t-[32px] border-b border-white/5">
+    <div className="relative h-64 overflow-hidden rounded-t-[32px] border-b border-dark-navy/5">
       <img 
         src={image} 
         alt={title} 
@@ -24,7 +24,7 @@ const ServiceCard = ({ title, subtitle, list, price, image, icon: Icon, delay }:
         referrerPolicy="no-referrer"
         loading="lazy"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-dark-navy/90 via-dark-navy/20 to-transparent opacity-60"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-dark-navy/40 via-transparent to-transparent opacity-60"></div>
       
       {/* Icon Badge */}
       <div className="absolute top-6 left-6 w-12 h-12 glass rounded-xl flex items-center justify-center text-primary-blue shadow-xl">
@@ -33,17 +33,17 @@ const ServiceCard = ({ title, subtitle, list, price, image, icon: Icon, delay }:
     </div>
 
     {/* Content */}
-    <div className="p-8 flex flex-col flex-grow">
-      <h3 className="text-2xl font-black mb-1 group-hover:text-primary-blue transition-colors leading-tight">
+    <div className="p-8 flex flex-col flex-grow bg-white">
+      <h3 className="text-2xl font-black mb-1 group-hover:text-primary-blue transition-colors leading-tight text-dark-navy">
         {title}
       </h3>
-      <p className="text-sm font-bold text-white/40 mb-6 uppercase tracking-wider">
+      <p className="text-sm font-bold text-dark-navy/40 mb-6 uppercase tracking-wider">
         {subtitle}
       </p>
 
       <ul className="space-y-3 mb-8 flex-grow">
         {list.map((item: string, i: number) => (
-          <li key={i} className="flex items-center gap-3 text-sm text-white/70">
+          <li key={i} className="flex items-center gap-3 text-sm text-dark-navy/70">
             <CheckCircle2 className="w-4 h-4 text-primary-blue flex-shrink-0" />
             {item}
           </li>
@@ -52,7 +52,7 @@ const ServiceCard = ({ title, subtitle, list, price, image, icon: Icon, delay }:
 
       <div className="flex items-end justify-between mt-auto">
         <div>
-          <div className="text-[10px] font-black uppercase text-white/30 tracking-widest mb-1">À PARTIR DE</div>
+          <div className="text-[10px] font-black uppercase text-dark-navy/30 tracking-widest mb-1">À PARTIR DE</div>
           <div className="text-3xl font-black text-primary-blue group-hover:text-light-blue transition-colors">
             {price}
           </div>
@@ -106,9 +106,9 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 relative">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+    <section id="services" className="py-20 md:py-32 relative">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ export const Services = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black mb-6"
+            className="text-4xl md:text-5xl font-black mb-6 text-dark-navy"
           >
             Des solutions de nettoyage <br className="hidden md:block" /> pour chaque besoin
           </motion.h2>

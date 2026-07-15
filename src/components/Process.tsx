@@ -11,18 +11,18 @@ const Step = ({ number, title, desc, icon: Icon, delay }: any) => (
   >
     <div className="relative mb-8">
       {/* Step Number Badge */}
-      <div className="absolute -top-3 -left-3 w-8 h-8 bg-primary-blue rounded-full flex items-center justify-center text-sm font-black z-20 shadow-lg glow-blue">
+      <div className="absolute -top-3 -left-3 w-8 h-8 bg-primary-blue rounded-full flex items-center justify-center text-sm font-black z-20 shadow-lg text-white">
         {number}
       </div>
       
       {/* Icon Hexagon/Circle Container */}
-      <div className="w-24 h-24 glass rounded-[2rem] flex items-center justify-center text-white/50 group-hover:text-gold-accent transition-all duration-500 group-hover:rotate-[30deg] border-white/5 group-hover:border-gold-accent/50 group-hover:bg-gold-accent/5">
+      <div className="w-24 h-24 glass rounded-[2rem] flex items-center justify-center text-dark-navy/30 group-hover:text-gold-accent transition-all duration-500 group-hover:rotate-[30deg] border-dark-navy/5 group-hover:border-gold-accent/50 group-hover:bg-gold-accent/5">
         <Icon className="w-10 h-10 group-hover:rotate-[-30deg] transition-transform duration-500" />
       </div>
     </div>
     
-    <h4 className="text-xl font-black mb-3 group-hover:text-gold-accent transition-colors">{title}</h4>
-    <p className="text-sm text-white/40 leading-relaxed max-w-[200px]">{desc}</p>
+    <h4 className="text-xl font-black mb-3 group-hover:text-gold-accent transition-colors text-dark-navy">{title}</h4>
+    <p className="text-sm text-dark-navy/40 leading-relaxed max-w-[200px]">{desc}</p>
   </motion.div>
 );
 
@@ -61,8 +61,8 @@ export const Process = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Connecting Line (Desktop) */}
-      <div className="hidden lg:block absolute top-[52%] left-1/2 -translate-x-1/2 w-[60%] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-blue to-transparent w-full h-full animate-[shimmer_3s_infinite] opacity-50"></div>
+      <div className="hidden lg:block absolute top-[52%] left-1/2 -translate-x-1/2 w-[60%] h-[1px] bg-gradient-to-r from-transparent via-dark-navy/5 to-transparent z-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-blue/30 to-transparent w-full h-full animate-[shimmer_3s_infinite] opacity-50"></div>
       </div>
 
       <div className="container mx-auto px-6">
@@ -82,7 +82,7 @@ export const Process = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black"
+            className="text-4xl md:text-5xl font-black text-dark-navy"
           >
             Simple, rapide et efficace
           </motion.h2>

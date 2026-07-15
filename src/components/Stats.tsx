@@ -40,8 +40,8 @@ export const Stats = () => {
 
   return (
     <section className="py-8 md:py-12 relative z-20">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {stats.map((stat, i) => (
             <motion.div 
               key={i}
@@ -49,20 +49,20 @@ export const Stats = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px] p-8 text-center transition-all duration-500 hover:bg-white/10 ${
-                i === 2 ? 'shadow-[0_0_40px_rgba(13,110,253,0.1)]' : ''
+              className={`bg-dark-navy/5 backdrop-blur-xl border border-dark-navy/5 rounded-[32px] p-8 text-center transition-all duration-500 hover:bg-dark-navy/10 ${
+                i === 2 ? 'shadow-xl' : ''
               }`}
             >
-              <div className="text-3xl font-black text-white mb-2 flex items-baseline justify-center gap-1">
+              <div className="text-3xl font-black text-dark-navy mb-2 flex items-baseline justify-center gap-1">
                 {stat.isDecimal ? (
                   <>
                     <span>4.9</span>
-                    <span className="text-lg text-white/40">{stat.suffix}</span>
+                    <span className="text-lg text-dark-navy/40">{stat.suffix}</span>
                   </>
                 ) : (
                   <>
                     <Counter value={stat.value} />
-                    <span className="text-lg text-white/40">{stat.suffix}</span>
+                    <span className="text-lg text-dark-navy/40">{stat.suffix}</span>
                   </>
                 )}
               </div>

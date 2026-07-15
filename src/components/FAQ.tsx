@@ -6,15 +6,15 @@ const FAQItem = ({ question, answer }: any) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-white/5 last:border-0">
+    <div className="border-b border-dark-navy/5 last:border-0">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-6 flex items-center justify-between text-left group"
       >
-        <span className={`text-lg font-bold transition-colors ${isOpen ? 'text-primary-blue' : 'text-white/80 group-hover:text-white'}`}>
+        <span className={`text-lg font-bold transition-colors ${isOpen ? 'text-primary-blue' : 'text-dark-navy/80 group-hover:text-dark-navy'}`}>
           {question}
         </span>
-        <div className={`w-8 h-8 rounded-full glass flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-180 bg-primary-blue text-white border-primary-blue' : ''}`}>
+        <div className={`w-8 h-8 rounded-full glass flex items-center justify-center transition-transform duration-300 ${isOpen ? 'rotate-180 bg-primary-blue text-white border-primary-blue' : 'text-dark-navy/30'}`}>
           <ChevronDown className="w-5 h-5" />
         </div>
       </button>
@@ -27,7 +27,7 @@ const FAQItem = ({ question, answer }: any) => {
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <p className="pb-6 text-white/50 leading-relaxed">
+            <p className="pb-6 text-dark-navy/50 leading-relaxed">
               {answer}
             </p>
           </motion.div>
@@ -58,25 +58,25 @@ export const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 relative">
-      <div className="container mx-auto px-6 max-w-4xl">
-        <div className="text-center mb-16">
+    <section className="py-20 md:py-32 relative">
+      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+        <div className="text-center mb-12 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-black mb-4"
+            className="text-3xl md:text-4xl font-black mb-4 text-dark-navy"
           >
             Questions fréquentes
           </motion.h2>
-          <p className="text-white/40">Tout ce que vous devez savoir sur nos services</p>
+          <p className="text-sm md:text-base text-dark-navy/40">Tout ce que vous devez savoir sur nos services</p>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card p-8 md:p-12"
+          className="glass-card p-6 md:p-12"
         >
           {faqs.map((faq, i) => (
             <FAQItem key={i} {...faq} />

@@ -28,32 +28,32 @@
 
 @layer base {
   body {
-    @apply bg-dark-navy text-white font-sans antialiased selection:bg-primary-blue/30;
+    @apply bg-white text-dark-navy font-sans antialiased selection:bg-primary-blue/30;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold tracking-tight;
+    @apply font-display font-bold tracking-tight text-dark-navy;
   }
 }
 
 @utility glass {
-  @apply bg-white/5 backdrop-blur-md border border-white/5;
+  @apply bg-white/70 backdrop-blur-md border border-dark-navy/5 shadow-sm;
 }
 
 @utility glass-card {
-  @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-[32px] shadow-2xl;
+  @apply bg-white/50 backdrop-blur-xl border border-dark-navy/5 rounded-[32px] shadow-xl;
 }
 
 @utility btn-gold {
-  @apply bg-gold-accent text-black font-bold px-8 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.3)] active:scale-95;
+  @apply bg-gold-accent text-white font-bold px-8 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg active:scale-95;
 }
 
 @utility btn-blue {
-  @apply bg-primary-blue text-white font-bold px-8 py-4 rounded-2xl hover:bg-primary-blue/90 transition-all duration-300 shadow-[0_10px_30px_rgba(13,110,253,0.3)] active:scale-95 flex items-center gap-2;
+  @apply bg-primary-blue text-white font-bold px-8 py-4 rounded-2xl hover:bg-primary-blue/90 transition-all duration-300 shadow-lg active:scale-95 flex items-center gap-2;
 }
 
 @utility btn-outline {
-  @apply border border-white/10 bg-white/5 backdrop-blur-lg text-white font-bold px-8 py-4 rounded-2xl hover:bg-white/10 transition-all duration-300 active:scale-95;
+  @apply border border-dark-navy/10 bg-white text-dark-navy font-bold px-8 py-4 rounded-2xl hover:bg-dark-navy/5 transition-all duration-300 active:scale-95;
 }
 
 .text-gradient-blue {
@@ -61,11 +61,11 @@
 }
 
 .glow-blue {
-  box-shadow: 0 0 30px rgba(13, 110, 253, 0.2);
+  box-shadow: 0 10px 40px rgba(13, 110, 253, 0.1);
 }
 
 .glow-gold {
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
 }
 
 /* Custom Scrollbar */
@@ -74,9 +74,9 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-navy;
+  @apply bg-gray-50;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-white/10 rounded-full border-2 border-dark-navy hover:bg-white/20;
+  @apply bg-dark-navy/10 rounded-full border-2 border-gray-50 hover:bg-dark-navy/20;
 }

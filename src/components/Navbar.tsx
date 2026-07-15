@@ -69,19 +69,19 @@ export const Navbar = () => {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-2 md:gap-4">
-          <a href="tel:+33618247245" className="btn-gold flex items-center gap-2 text-xs md:text-sm px-4 py-2 md:px-6 md:py-3">
-            <Phone className="w-3.5 h-3.5 md:w-4 md:h-4" />
+        <div className="flex items-center gap-3 md:gap-4">
+          <a href="tel:+33618247245" className="btn-gold flex items-center gap-2 text-xs md:text-sm px-4 py-2.5 md:px-6 md:py-3 text-white">
+            <Phone className="w-4 h-4" />
             <span className="hidden sm:inline">06 18 24 72 45</span>
-            <span className="sm:hidden">Appel</span>
+            <span className="sm:hidden">Appeler</span>
           </a>
           
           {/* Mobile Toggle */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden w-10 h-10 glass rounded-xl flex items-center justify-center text-white"
+            className="lg:hidden w-11 h-11 glass rounded-xl flex items-center justify-center text-white active:scale-95 transition-transform"
           >
-            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>

@@ -7,9 +7,9 @@ const TestimonialCard = ({ name, role, content, delay }: any) => (
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
     transition={{ delay }}
-    className="glass-card p-10 relative group hover:bg-white/10 transition-all duration-500"
+    className="glass-card p-10 relative group hover:bg-dark-navy/5 transition-all duration-500"
   >
-    <div className="absolute top-10 right-10 text-primary-blue/20 group-hover:text-primary-blue/40 transition-colors">
+    <div className="absolute top-10 right-10 text-primary-blue/10 group-hover:text-primary-blue/20 transition-colors">
       <Quote className="w-12 h-12" />
     </div>
     
@@ -19,17 +19,17 @@ const TestimonialCard = ({ name, role, content, delay }: any) => (
       ))}
     </div>
 
-    <p className="text-lg text-white/80 mb-8 italic leading-relaxed">
+    <p className="text-lg text-dark-navy/80 mb-8 italic leading-relaxed">
       "{content}"
     </p>
 
     <div className="flex items-center gap-4">
-      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-blue to-light-blue flex items-center justify-center font-black text-xl">
+      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-blue to-light-blue flex items-center justify-center font-black text-xl text-white">
         {name.charAt(0)}
       </div>
       <div>
-        <h4 className="font-black text-white">{name}</h4>
-        <p className="text-xs font-bold text-white/40 uppercase tracking-widest">{role}</p>
+        <h4 className="font-black text-dark-navy">{name}</h4>
+        <p className="text-xs font-bold text-dark-navy/40 uppercase tracking-widest">{role}</p>
       </div>
     </div>
   </motion.div>
@@ -58,9 +58,9 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section id="avis" className="py-24 relative bg-dark-navy/80">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
+    <section id="avis" className="py-20 md:py-32 relative bg-gray-50/50">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export const Testimonials = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-black"
+            className="text-4xl md:text-5xl font-black text-dark-navy"
           >
             Ils nous font confiance
           </motion.h2>
