@@ -40,13 +40,16 @@ export const Navbar = () => {
             <img 
               src="/logo.png" 
               alt="BC Clean Logo" 
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain transition-all duration-300"
               referrerPolicy="no-referrer"
             />
           </div>
           <div className="leading-none">
-            <span className={`block font-bold text-sm md:text-lg tracking-tight uppercase transition-colors ${isScrolled ? 'text-dark-navy' : 'text-white'}`}>BC CLEAN</span>
-            <span className="text-[7px] md:text-[9px] text-gold-accent uppercase tracking-[0.2em] font-semibold">Excellence Française</span>
+            <img 
+              src="/logo2.png" 
+              alt="BC Clean" 
+              className={`h-8 md:h-12 object-contain transition-all ${isScrolled ? 'filter invert' : ''}`}
+            />
           </div>
         </a>
 
