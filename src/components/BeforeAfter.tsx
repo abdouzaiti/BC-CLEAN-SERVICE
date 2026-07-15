@@ -108,12 +108,7 @@ export const BeforeAfter = () => {
               </div>
             </div>
 
-            <button className="btn-blue group h-14 px-10">
-              <span className="relative z-10 flex items-center gap-3">
-                NOTRE PORTFOLIO
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </button>
+
           </motion.div>
         </div>
       </div>
