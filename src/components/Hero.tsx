@@ -63,10 +63,15 @@ export const Hero = () => {
               transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 md:gap-5 mb-10 md:mb-12"
             >
-              <button className="btn-blue group text-sm md:text-lg px-8 md:px-10 py-4 md:py-5 justify-center">
+              <a 
+                href="https://wa.me/33618247245" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-blue group text-sm md:text-lg px-8 md:px-10 py-4 md:py-5 flex items-center justify-center gap-2"
+              >
                 Demander un devis
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
