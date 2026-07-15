@@ -32,8 +32,11 @@ export const Footer = () => {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-display font-black text-lg tracking-tighter leading-none uppercase">BC CLEAN</span>
-                <span className="font-display text-[8px] text-gold-accent tracking-widest font-bold">SERVICE</span>
+                <img 
+                  src="/logo2.png" 
+                  alt="BC Clean" 
+                  className="h-8 md:h-10 object-contain"
+                />
               </div>
             </div>
             <p className="text-white/40 text-sm leading-relaxed mb-6 md:mb-8 max-w-sm">
