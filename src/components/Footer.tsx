@@ -50,7 +50,7 @@ export const Footer = () => {
                 </svg>
               </a>
               <a href="https://www.snapchat.com/add/bc-clean?share_id=VClyI-yBsto&locale=fr-FR" target="_blank" rel="noopener noreferrer" className="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-primary-blue hover:text-white transition-all overflow-hidden p-1.5">
-                <img src="/src/assets/images/snapchat_logo_real_1784093021223.jpg" alt="Snapchat" className="w-full h-full object-contain" />
+                <img src="/snapchat_logo.jpg" alt="Snapchat" className="w-full h-full object-contain" />
               </a>
             </div>
           </div>
