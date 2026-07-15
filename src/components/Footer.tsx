@@ -64,7 +64,17 @@ export const Footer = () => {
             <ul className="space-y-4">
               {['Accueil', 'Services', 'À propos', 'Réalisations', 'Avis', 'Contact'].map((item) => (
                 <li key={item}>
-                  <a href={`#${item === 'Contact' ? 'contact' : item.toLowerCase()}`} className="text-white/40 hover:text-primary-blue transition-colors text-sm">
+                  <a 
+                    href={
+                      item === 'Accueil' ? '#' : 
+                      item === 'À propos' ? '#about' : 
+                      item === 'Réalisations' ? '#realisations' : 
+                      item === 'Avis' ? '#avis' : 
+                      item === 'Contact' ? '#contact' : 
+                      `#${item.toLowerCase()}`
+                    } 
+                    className="text-white/40 hover:text-primary-blue transition-colors text-sm"
+                  >
                     {item}
                   </a>
                 </li>
