@@ -31,12 +31,12 @@ export const Navbar = () => {
         isScrolled ? 'py-2 md:py-4' : 'py-4 md:py-8'
       }`}
     >
-      <div className={`container mx-auto px-4 md:px-6 flex items-center justify-between transition-all duration-500 rounded-full ${
-        isScrolled ? 'glass py-2 shadow-2xl backdrop-blur-xl bg-white/10' : ''
+      <div className={`container mx-auto px-4 md:px-6 flex items-center justify-between transition-all duration-500 ${
+        isScrolled ? 'glass py-2 shadow-lg rounded-full' : ''
       }`}>
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group shrink-0">
-          <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+        <a href="#" className="flex items-center gap-2 md:gap-3 group shrink-0">
+          <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <img 
               src="/logo.png" 
               alt="BC Clean Logo" 
@@ -45,7 +45,7 @@ export const Navbar = () => {
             />
           </div>
           <div className="leading-none">
-            <span className="block font-bold text-sm md:text-lg tracking-tight text-white uppercase">BC CLEAN</span>
+            <span className={`block font-bold text-sm md:text-lg tracking-tight uppercase transition-colors ${isScrolled ? 'text-dark-navy' : 'text-white'}`}>BC CLEAN</span>
             <span className="text-[7px] md:text-[9px] text-gold-accent uppercase tracking-[0.2em] font-semibold">Excellence Française</span>
           </div>
         </a>
@@ -57,20 +57,22 @@ export const Navbar = () => {
               key={link.name}
               href={link.href}
               className={`text-sm font-medium transition-all relative group ${
-                i === 0 ? 'text-white' : 'text-white/70 hover:text-white'
+                isScrolled 
+                  ? (i === 0 ? 'text-primary-blue' : 'text-dark-navy/70 hover:text-primary-blue')
+                  : (i === 0 ? 'text-white' : 'text-white/70 hover:text-white')
               }`}
             >
               {link.name}
-              <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary-blue transition-all duration-300 ${
-                i === 0 ? 'w-full' : 'w-0 group-hover:w-full'
-              }`}></span>
+              <span className={`absolute -bottom-1 left-0 h-0.5 transition-all duration-300 ${
+                i === 0 ? 'w-full bg-primary-blue' : 'w-0 group-hover:w-full bg-primary-blue'
+              } ${!isScrolled && i === 0 ? 'bg-white' : ''}`}></span>
             </a>
           ))}
         </nav>
 
         {/* Actions */}
         <div className="flex items-center gap-3 md:gap-4">
-          <a href="tel:+33618247245" className="btn-gold flex items-center gap-2 text-xs md:text-sm px-4 py-2.5 md:px-6 md:py-3 text-white">
+          <a href="tel:+33618247245" className="btn-gold flex items-center gap-2 text-xs md:text-sm px-4 py-2.5 md:px-6 md:py-3">
             <Phone className="w-4 h-4" />
             <span className="hidden sm:inline">06 18 24 72 45</span>
             <span className="sm:hidden">Appeler</span>
@@ -79,7 +81,9 @@ export const Navbar = () => {
           {/* Mobile Toggle */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden w-11 h-11 glass rounded-xl flex items-center justify-center text-white active:scale-95 transition-transform"
+            className={`lg:hidden w-11 h-11 glass rounded-xl flex items-center justify-center active:scale-95 transition-all ${
+              isScrolled ? 'text-dark-navy' : 'text-white'
+            }`}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -101,7 +105,7 @@ export const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-lg font-bold text-white/80 hover:text-primary-blue py-2 border-b border-white/5 transition-colors"
+                  className="text-lg font-bold text-dark-navy/80 hover:text-primary-blue py-2 border-b border-dark-navy/5 transition-colors"
                 >
                   {link.name}
                 </a>

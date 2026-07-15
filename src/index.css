@@ -45,7 +45,7 @@
 }
 
 @utility btn-gold {
-  @apply bg-gold-accent text-white font-bold px-8 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg active:scale-95;
+  @apply bg-gold-accent text-dark-navy font-bold px-8 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg active:scale-95;
 }
 
 @utility btn-blue {
