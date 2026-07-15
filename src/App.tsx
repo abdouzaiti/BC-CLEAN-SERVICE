@@ -7,7 +7,6 @@ import { BeforeAfter } from './components/BeforeAfter';
 import { Process } from './components/Process';
 import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { FloatingBubbles } from './components/FloatingBubbles';
 
@@ -25,7 +24,6 @@ export default function App() {
         <Process />
         <Testimonials />
         <FAQ />
-        <Contact />
       </main>
       <Footer />
     </div>

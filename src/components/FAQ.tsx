@@ -41,7 +41,7 @@ export const FAQ = () => {
   const faqs = [
     {
       question: "Quelles zones couvrez-vous ?",
-      answer: "Nous intervenons principalement dans toute la région de [Votre Région] et ses environs. Pour des demandes spécifiques hors zone, n'hésitez pas à nous contacter."
+      answer: "Nous intervenons principalement dans toute la région de Grenoble et ses alentours. Pour des demandes spécifiques hors zone, n'hésitez pas à nous contacter."
     },
     {
       question: "Fournissez-vous le matériel de nettoyage ?",
