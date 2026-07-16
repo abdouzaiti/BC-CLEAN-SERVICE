@@ -99,7 +99,7 @@ export const Footer = () => {
           {/* Contact */}
           <div id="contact">
             <h4 className="text-white font-black uppercase text-sm tracking-widest mb-8">Contact</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary-blue" />
                 <a href="mailto:bccleaning38@gmail.com" className="text-white/40 hover:text-white transition-colors text-sm">bccleaning38@gmail.com</a>
@@ -113,6 +113,9 @@ export const Footer = () => {
                 <span className="text-white/40 text-sm">Grenoble et alentours, France</span>
               </li>
             </ul>
+            <h4 className="text-white font-black uppercase text-sm tracking-widest mb-4">Horaires</h4>
+            <p className="text-white/40 text-sm">Tous les jours</p>
+            <p className="text-white text-sm font-semibold">08:00 – 20:00</p>
           </div>
 
         </div>
